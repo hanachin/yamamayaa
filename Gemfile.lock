@@ -1,0 +1,32 @@
+GIT
+  remote: git://github.com/hanachin/ruby-irkit.git
+  revision: 1c564c2849ea1c223d89d1b3f34c243f655cb134
+  branch: add_X-Requested-With_curl_header
+  specs:
+    irkit (0.0.9)
+      args_parser
+      dnssd
+      hashie
+      httparty
+      json
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    args_parser (0.2.0)
+    dnssd (3.0.1)
+    hashie (3.4.2)
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.3)
+    multi_xml (0.5.5)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  irkit!
+
+BUNDLED WITH
+   1.10.6
