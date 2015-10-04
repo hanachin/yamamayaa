@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/hanachin/ruby-irkit.git
-  revision: 1c564c2849ea1c223d89d1b3f34c243f655cb134
+  revision: bc0f87b5a8d73c6aa337ff0dfadbbda5ad7106dc
   branch: add_X-Requested-With_curl_header
   specs:
     irkit (0.0.9)
