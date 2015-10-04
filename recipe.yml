@@ -15,6 +15,12 @@ resources:
     status: updated
     user: sei
   - type: command
+    script: systemctl enable cronie
+    check_script: systemctl status cronie | grep enabled
+  - type: command
+    script: systemctl start cronie
+    check_script: systemctl status cronie | grep running
+  - type: command
     check_script: 'gem list | grep bundler'
     script: gem install bundler
     user: sei
