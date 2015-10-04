@@ -4,7 +4,7 @@ job_type :irkit, 'cd :path && `ruby -e "print Gem.user_dir"`/bin/bundle exec irk
 
 (8..11).each do |h|
   every 1.day, at: "#{h}pm" do
-    irkit 'light_down'
+    irkit 'light_darken'
   end
 end
 
