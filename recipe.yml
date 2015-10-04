@@ -12,7 +12,7 @@ resources:
   - type: git
     repository: https://github.com/hanachin/yamamayaa.git
     path: /home/sei/yamamayaa
-    status: updated
+    state: updated
     user: sei
   - type: command
     script: systemctl enable cronie
