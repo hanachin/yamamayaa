@@ -32,3 +32,7 @@ resources:
     destination: /home/sei/yamamayaa/.irkit.json
     source: /home/sei/.irkit.json
     user: sei
+  - type: command
+    cwd: /home/sei/yamamayaa
+    script: "`ruby -e 'print Gem.user_dir'`/bin/bundle exec whenever -w"
+    user: sei
