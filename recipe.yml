@@ -1,12 +1,14 @@
 resources:
   - type: package
-    name: git
-  - type: package
-    name: ruby
-  - type: package
     name: base-devel
     options: '--needed'
     check_script: pacman -Q gcc
+  - type: package
+    name: cronie
+  - type: package
+    name: git
+  - type: package
+    name: ruby
   - type: git
     repository: https://github.com/hanachin/yamamayaa.git
     path: /home/sei/yamamayaa
