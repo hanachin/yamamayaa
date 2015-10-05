@@ -21,6 +21,7 @@ fi
 
 if [ ! -f $ika_path ]; then
   touch $ika_path
-  # TODO yo notification
   echo $(date) ika start
+  curl https://api.justyo.co/yo/ -F username=tompng -F api_token=$(cat ~/.yo_api_token)
+  curl https://api.justyo.co/yo/ -F username=pakana -F api_token=$(cat ~/.yo_api_token)
 fi
