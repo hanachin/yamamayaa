@@ -15,8 +15,8 @@ if [ -z "$wii_u_alive" ]; then
   if [ -f $ika_path ]; then
     rm $ika_path
     echo $(date) ika end
-    exit 0
   fi
+  exit 0
 fi
 
 if [ ! -f $ika_path ]; then
