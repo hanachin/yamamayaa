@@ -8,6 +8,8 @@ resources:
   - type: package
     name: git
   - type: package
+    name: ntp
+  - type: package
     name: ruby
   - type: git
     repository: https://github.com/hanachin/yamamayaa.git
