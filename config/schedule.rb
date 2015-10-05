@@ -10,4 +10,5 @@ end
 
 every 1.day, at: '12:00am' do
   irkit 'light_off'
+  command 'sudo ntpd -qg'
 end
