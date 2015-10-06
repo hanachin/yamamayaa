@@ -9,6 +9,14 @@ job_type :yamamayaa_command, 'cd :path && :task :output'
   end
 end
 
+every 1.day, at: '7:20am' do
+  irkit 'light_on'
+end
+
+every 1.day, at: '8:00am' do
+  irkit 'light_off'
+end
+
 every 1.day, at: '12:00pm' do
   irkit 'light_on'
 end
