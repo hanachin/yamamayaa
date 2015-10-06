@@ -11,7 +11,7 @@ wii_u_ip_address=$(arp -e | grep $(cat ~/.wii_u_mac_address) | cut -f 1 -d' ')
 
 wii_u_alive=$(echo $ping_responses | grep -F "$wii_u_ip_address")
 
-if [ -n "$wii_u_ip_address" -a -z "$wii_u_alive" ]; then
+if [ -z "$wii_u_ip_address" -o -z "$wii_u_alive" ]; then
   if [ -f $ika_path ]; then
     rm $ika_path
     echo $(date) ika end
