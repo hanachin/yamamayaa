@@ -5,7 +5,7 @@ set -e
 script_dir=$(cd $(dirname $0) && pwd)
 ika_path=$(dirname $script_dir)/tmp/ika
 
-ping_responses=$(ping -c 2 -i 10 -b 255.255.255.255)
+ping_responses=$(ping -c 2 -i 10 -b 192.168.1.255)
 
 wii_u_ip_address=$(arp -e | grep $(cat ~/.wii_u_mac_address) | cut -f 1 -d' ')
 
