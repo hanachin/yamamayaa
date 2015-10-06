@@ -22,6 +22,9 @@ fi
 if [ ! -f $ika_path ]; then
   touch $ika_path
   echo $(date) ika start
-  curl https://api.justyo.co/yo/ -F username=tompng -F api_token=$(cat ~/.yo_api_token)
-  curl https://api.justyo.co/yo/ -F username=pakana -F api_token=$(cat ~/.yo_api_token)
+  for ika in $(cat config/ika)
+  do
+    echo ika yo to $ika
+    curl https://api.justyo.co/yo/ -F username=$ika -F api_token=$(cat ~/.yo_api_token)
+  done
 fi
