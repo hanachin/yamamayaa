@@ -13,7 +13,7 @@ every 1.day, at: '7:20am' do
   irkit 'light_on'
 end
 
-every 1.day, at: '8:00am' do
+every 1.day, at: '8:10am' do
   irkit 'light_off'
 end
 
