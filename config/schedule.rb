@@ -4,32 +4,32 @@ job_type :irkit, 'cd :path && `ruby -e "print Gem.user_dir"`/bin/bundle exec irk
 job_type :yamamayaa_command, 'cd :path && :task :output'
 
 (8..11).each do |h|
-  every 1.day, at: "#{h}pm" do
+  every :weekday, at: "#{h}pm" do
     irkit 'light_darken'
   end
 end
 
-every 1.day, at: '7:20am' do
+every :weekday, at: '7:20am' do
   irkit 'light_on'
 end
 
-every 1.day, at: '8:10am' do
+every :weekday, at: '8:10am' do
   irkit 'light_off'
 end
 
-every 1.day, at: '12:00pm' do
+every :weekday, at: '12:00pm' do
   irkit 'light_on'
 end
 
-every 1.day, at: '1:00pm' do
+every :weekday, at: '1:00pm' do
   irkit 'light_off'
 end
 
-every 1.day, at: '5:30pm' do
+every :weekday, at: '5:30pm' do
   irkit 'light_on'
 end
 
-every 1.day, at: '12:00am' do
+every :weekday, at: '12:00am' do
   irkit 'light_off'
   command 'sudo ntpd -qg'
 end
