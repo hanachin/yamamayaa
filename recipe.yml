@@ -30,7 +30,7 @@ resources:
     user: sei
   - type: command
     cwd: /home/sei/yamamayaa
-    script: "`ruby -e 'print Gem.user_dir'`/bin/bundle install --path=vendor/bundle"
+    script: "`ruby -e 'print Gem.user_dir'`/bin/bundle install --path=.bundle"
     user: sei
   - type: symlink
     destination: /home/sei/yamamayaa/.irkit.json
