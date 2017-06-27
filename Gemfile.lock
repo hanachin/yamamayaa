@@ -10,10 +10,12 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     args_parser (0.2.0)
+    bcrypt_pbkdf (1.0.0)
     builder (3.2.3)
     chronic (0.10.2)
     coderay (1.1.1)
     dnssd (3.0.1)
+    ffi (1.9.18)
     hashie (3.5.5)
     highline (1.7.8)
     httparty (0.15.5)
@@ -40,6 +42,10 @@ GEM
     rainbow (2.2.2)
       rake
     rake (12.0.0)
+    rbnacl (4.0.2)
+      ffi
+    rbnacl-libsodium (1.0.11)
+      rbnacl (>= 3.0.1)
     serverkit (0.6.9)
       activemodel
       activesupport (< 5.0.0)
@@ -68,8 +74,11 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt_pbkdf (>= 1.0, < 2.0)
   irkit
   pry
+  rbnacl (>= 3.2, < 5.0)
+  rbnacl-libsodium
   serverkit
   whenever
 
