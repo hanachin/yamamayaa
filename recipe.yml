@@ -4,11 +4,7 @@ resources:
     options: '--needed'
     check_script: pacman -Q gcc
   - type: package
-    name: cronie
-  - type: package
     name: git
-  - type: package
-    name: ntp
   - type: package
     name: nmap
   - type: package
@@ -18,12 +14,6 @@ resources:
     path: /home/sei/yamamayaa
     state: updated
     user: sei
-  - type: command
-    script: systemctl enable cronie
-    check_script: systemctl status cronie | grep enabled
-  - type: command
-    script: systemctl start cronie
-    check_script: systemctl status cronie | grep running
   - type: command
     check_script: 'gem list | grep bundler'
     script: gem install bundler
