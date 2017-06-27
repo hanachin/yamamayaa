@@ -8,4 +8,5 @@ gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
 gem 'irkit'
 gem 'pry'
 gem 'serverkit'
+gem 'serverkit-rbenv'
 gem 'whenever', require: false
