@@ -1,12 +1,12 @@
 resources:
-  - type: package
-    name: base-devel
-    options: '--needed'
-    check_script: pacman -Q gcc
+  - type: rbenv_dependent_packages
+  - type: rbenv_ruby
+    version: 2.4.1
+    user: sei
+    dependencies: true
+    profile_path: /home/sei/.bashrc
   - type: package
     name: git
-  - type: package
-    name: ruby
   - type: git
     repository: https://github.com/hanachin/yamamayaa.git
     path: /home/sei/yamamayaa
@@ -18,7 +18,7 @@ resources:
     user: sei
   - type: command
     cwd: /home/sei/yamamayaa
-    script: "`ruby -e 'print Gem.user_dir'`/bin/bundle install --path=.bundle"
+    script: "bundle install --path=.bundle"
     user: sei
   - type: symlink
     destination: /home/sei/yamamayaa/.irkit.json
@@ -26,5 +26,5 @@ resources:
     user: sei
   - type: command
     cwd: /home/sei/yamamayaa
-    script: "`ruby -e 'print Gem.user_dir'`/bin/bundle exec whenever -w"
+    script: "bundle exec whenever -w"
     user: sei
