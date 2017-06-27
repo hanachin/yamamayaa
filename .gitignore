@@ -1,4 +1,3 @@
 .bundle
 vendor/bundle
 log/cron_log.log
-tmp/ika

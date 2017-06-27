@@ -33,7 +33,3 @@ every :weekday, at: '12:00am' do
   irkit 'light_off'
   command 'sudo ntpd -qg'
 end
-
-# every 5.minutes do
-#   yamamayaa_command './bin/ika.sh'
-# end
