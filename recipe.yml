@@ -20,6 +20,7 @@ resources:
     cwd: /home/sei/yamamayaa
     script: "bundle install --path=.bundle"
     user: sei
+    check_script: "bundle check --path=.bundle"
   - type: symlink
     destination: /home/sei/yamamayaa/.irkit.json
     source: /home/sei/.irkit.json
