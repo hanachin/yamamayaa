@@ -28,3 +28,7 @@ resources:
     cwd: /home/sei/yamamayaa
     script: "bundle exec whenever -w"
     user: sei
+  - type: command
+    cwd: /opt
+    script: wget -O node-v8.1.3-linux-armv6l.tar.gz https://nodejs.org/dist/v8.1.3/node-v8.1.3-linux-armv6l.tar.gz && tar -xzf node-v8.1.3-linux-armv6l.tar.gz && mv node-v8.1.3-linux-armv6l nodejs && rm node-v8.1.3-linux-armv6l.tar.gz && ln -s /opt/nodejs/bin/node /usr/bin/node && ln -s /opt/nodejs/bin/npm /usr/bin/npm
+    check_script: which npm
