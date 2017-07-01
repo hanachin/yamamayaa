@@ -48,3 +48,20 @@ resources:
     destination: /home/sei/yamamayaa/homebridge-config.json
     source: /home/sei/.homebridge/config.json
     user: sei
+  - type: directory
+    path: /home/sei/.config/systemd/user/
+    user: sei
+  - type: symlink
+    destination: /home/sei/yamamayaa/homebridge.service
+    source: /home/sei/.config/systemd/user/homebridge.service
+    user: sei
+  - type: symlink
+    destination: /home/sei/yamamayaa/homebridge.service
+    source: /home/sei/.config/systemd/user/homebridge.service
+    user: sei
+  - type: command
+    script: systemctl --user enable homebridge
+    user: sei
+  - type: command
+    script: systemctl --user restart homebridge
+    user: sei
