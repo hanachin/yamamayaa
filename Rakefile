@@ -28,3 +28,8 @@ file "homebridge-config.json" do
   }
   File.write("homebridge-config.json", JSON.dump(config))
 end
+
+desc "deploy to yamamayaa"
+task :deploy do
+  sh 'bin/serverkit apply recipe.yml --hosts=yamamayaa.local --log-level=DEBUG'
+end
