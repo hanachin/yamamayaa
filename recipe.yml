@@ -37,7 +37,10 @@ resources:
     name: libavahi-compat-libdnssd-dev
   - type: command
     script: npm install -g --unsafe-perm homebridge
-    check_script: ls -al $(npm bin -g)/homebridge
+    check_script: npm ls -g homebridge-irkit
+  - type: command
+    script: npm install -g homebridge-irkit
+    check_script: npm ls -g homebridge-irkit
   - type: directory
     path: /home/sei/.homebridge
     user: sei
