@@ -1,3 +1,4 @@
 .bundle
 vendor/bundle
 log/cron_log.log
+homebridge-config.json
