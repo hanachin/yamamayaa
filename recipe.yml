@@ -18,7 +18,7 @@ resources:
     user: sei
   - type: command
     cwd: /home/sei/yamamayaa
-    script: "bundle install --path=.bundle"
+    script: "bundle install --path=.bundle --without deploy"
     user: sei
     check_script: "bundle check --path=.bundle"
   - type: symlink
